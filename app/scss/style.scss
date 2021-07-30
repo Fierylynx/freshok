@@ -1,7 +1,10 @@
 @import "vars";
 @import "fonts";
 @import "reset";
+@import "libs";
 @import "global";
+
+// ------ HEADER
 
 .header-info {
   background-color: $header-footer;
@@ -28,7 +31,7 @@
 
   @extend %hover;
 
-  & a{
+  & a {
     display: flex;
     align-items: center;
   }
@@ -47,7 +50,7 @@
     margin-right: 24px;
   }
 
-   @extend %hover;
+  @extend %hover;
 }
 
 .menu {
@@ -199,7 +202,7 @@
     background-color: $header-footer;
     color: #fff;
     text-transform: uppercase;
-    font-weight: 400; // хотя в макете 600, выглядит не очень
+    @extend %lato-400; // хотя в макете 600, выглядит не очень
     border: none;
     border-radius: 0 6px 6px 0;
     transition: background-color 0.3s;
@@ -222,13 +225,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     width: 44px;
     height: 44px;
-    position: relative;
     border: none;
+    border-radius: 3px;
     background-color: transparent;
     padding: 0;
-    border-radius: 3px;
   }
 
   &__button:hover {
@@ -246,17 +249,73 @@
     left: 0;
     width: 18px;
     height: 18px;
-    background-color: #fff;
-    color: #cf3e3b;
-    border-radius: 50%;
     font-size: 10px;
+    line-height: 1.8;
     text-align: center;
-    line-height: 18px;
+    color: #cf3e3b;
+    background-color: #fff;
+    border-radius: 50%;
   }
 }
 
+// ------ SLIDER
+
+.slide {
+  position: relative;
+  width: 100%;
+  background-repeat: no-repeat;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    height: calc(100vh - 369px);
+  }
+
+  &__text {
+    max-width: 900px;
+    color: $title;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 6px;
+    margin-bottom: 30px;
+    padding: 24px;
+  }
+  & h2 {
+    @extend %signika-700;
+    font-size: 60px;
+    line-height: 1.3;
+    text-transform: uppercase;
+  }
+  & span {
+    display: block;
+    color: $discount;
+  }
+}
+
+.slick-arrow {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  border: none;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 6px;
+  padding: 0;
+
+  &.slick-prev {
+    left: 60px;
+  }
+
+  &.slick-next {
+    right: 60px;
+  }
+}
+
+// ------ FOOTER
+
 .footer {
-  font-weight: 400;
+  @extend %lato-400;
   color: #fff;
   background-color: $header-footer;
   padding: 30px 0;
@@ -298,7 +357,7 @@
     height: 40px;
     font-size: 12px;
     line-height: 1.2;
-    font-weight: 700;
+    @extend %lato-700;
     background-color: $accent;
   }
 
