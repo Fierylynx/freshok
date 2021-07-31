@@ -51,4 +51,15 @@ $('.menu-product').each(function() {
           selectList.slideUp(duration);
       }
   });
+  $('.hero-slider').slick({
+      dots: false,
+
+      nextArrow: '<button type="button" class="slick-next"><img src="../images/icons/arrow-prev.svg" alt=""></button>',
+      prevArrow: '<button type="button" class="slick-prev"><img src="../images/icons/arrow-next.svg" alt=""></button>'
+  });
+
+
+  var mixer = mixitup('.products-list');
+
 });
+
