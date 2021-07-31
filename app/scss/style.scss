@@ -383,7 +383,6 @@
 // ------ PRODUCTS
 
 .products {
-  padding: 72px 0;
 
   &__title {
     @extend %signika-600;
@@ -435,6 +434,11 @@
   border: 1px solid rgba(17, 17, 17, 0.2);
   border-radius: 6px;
   padding: 18px;
+  transition: border-color 0.3s;
+
+  &:hover {
+    border: 1px solid $accent;
+  }
 
   &__news {
     position: absolute;
