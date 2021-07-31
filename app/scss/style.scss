@@ -18,20 +18,18 @@
     line-height: 1.2;
     text-transform: uppercase;
     color: #fff;
-    padding: 14px 0;
+    padding: 11px 0;
   }
 }
 
 .delivery-phone {
   display: flex;
 
-  & li:not(:last-child) {
-    margin-right: 48px;
+  &__item:not(:last-child) {
+    margin-right: 40px;
   }
 
-  @extend %hover;
-
-  & a {
+  &__link {
     display: flex;
     align-items: center;
   }
@@ -46,11 +44,9 @@
 .info-about {
   display: flex;
 
-  & li:not(:last-child) {
-    margin-right: 24px;
+  &__item:not(:last-child) {
+    margin-right: 18px;
   }
-
-  @extend %hover;
 }
 
 .menu {
@@ -60,7 +56,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px 0;
+    padding: 23px 0;
   }
 }
 
@@ -77,7 +73,7 @@
   transition: background-color 0.3s;
 
   &:hover {
-    background-color: #e0edcf;
+    background-color: $hover;
   }
 }
 
@@ -91,7 +87,7 @@
   transition: border 0.5s;
 
   &.on {
-    background-color: #e0edcf;
+    background-color: $hover;
   }
 
   &::before {
@@ -143,7 +139,7 @@
   &__item {
     display: block;
     @extend %lato-400;
-    color: #000;
+    color: $body;
     border-bottom: 1px solid #c1c1c1;
     border-left: 3px solid transparent;
     padding: 0 25px;
@@ -192,17 +188,21 @@
     background-color: #eff6e7;
   }
 
+  &__input:focus {
+    border-radius: 6px 0 0px 6px;
+  }
+
   &__input::placeholder {
     color: $header-footer;
   }
 
   &__button {
-    width: 157px;
+    width: 210px;
     height: 50px;
     background-color: $header-footer;
     color: #fff;
     text-transform: uppercase;
-    @extend %lato-400; // хотя в макете 600, выглядит не очень
+    @extend %lato-600;
     border: none;
     border-radius: 0 6px 6px 0;
     transition: background-color 0.3s;
@@ -211,14 +211,22 @@
   &__button:hover {
     background-color: rgba(49, 53, 43, 0.85);
   }
+
+  &__button:active {
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  &__button:focus {
+    border-radius: 0 6px 6px 0;
+  }
 }
 
-.user-nav {
+.user-navigation {
   display: flex;
   align-items: center;
 
   &__item:not(:last-child) {
-    margin-right: 33px;
+    margin-right: 22px;
   }
 
   &__button {
@@ -235,15 +243,19 @@
   }
 
   &__button:hover {
-    background-color: #4d800c;
+    background-color: $main-hover;
   }
 
   &__button:active {
-    background-color: #63a60e;
-    box-shadow: inset 0px 0px 0px 32px rgba(255, 255, 255, 0.25);
+    background-color: $accent;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
 
-  &__button span {
+  &__button:active svg {
+    opacity: 0.5;
+  }
+
+  &__number {
     position: absolute;
     top: -4px;
     left: 0;
@@ -252,7 +264,7 @@
     font-size: 10px;
     line-height: 1.8;
     text-align: center;
-    color: #cf3e3b;
+    color: $discount;
     background-color: #fff;
     border-radius: 50%;
   }
@@ -260,7 +272,7 @@
 
 // ------ SLIDER
 
-.slide {
+.hero-slide {
   position: relative;
   width: 100%;
   background-repeat: no-repeat;
@@ -273,35 +285,53 @@
 
   &__text {
     max-width: 900px;
-    color: $title;
+    color: $content;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 6px;
     margin-bottom: 30px;
     padding: 24px;
   }
-  & h2 {
-    @extend %signika-700;
+
+  &__text p {
+    @extend %lato-400;
+    font-size: 16px;
+    letter-spacing: normal;
+  }
+
+  &__title {
     font-size: 60px;
     line-height: 1.3;
+    letter-spacing: 0.2px;
     text-transform: uppercase;
   }
-  & span {
+
+  &__title-discount {
     display: block;
     color: $discount;
+    margin-bottom: 14px;
   }
 }
 
 .slick-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   width: 60px;
   height: 60px;
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;
-  border: none;
+  border: 3px solid transparent;
+  outline: transparent;
   background: rgba(255, 255, 255, 0.8);
   border-radius: 6px;
   padding: 0;
+
+  &:focus {
+    border: 3px solid $hover;
+    border-radius: 6px;
+  }
 
   &.slick-prev {
     left: 60px;
@@ -312,13 +342,207 @@
   }
 }
 
+// ------ BENEFITS
+
+.benefits {
+  display: flex;
+  justify-content: center;
+  padding: 48px 0;
+  background-color: #f6f6f6;
+
+  & svg {
+    margin-right: 24px;
+  }
+
+  &__content {
+    letter-spacing: normal;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 48px;
+  }
+
+  &__title {
+    display: block;
+    @extend %lato-700;
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  &__text {
+    @extend %lato-400;
+    color: $content;
+  }
+}
+
+// ------ PRODUCTS
+
+.products {
+  padding: 72px 0;
+
+  &__title {
+    @extend %signika-600;
+    font-size: 32px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
+
+.products-filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+
+  &__item:not(:last-child) {
+    margin-right: 16px;
+  }
+
+  &__button {
+    @extend %lato-700;
+    font-size: 15px;
+    color: $content;
+    text-transform: uppercase;
+    background-color: transparent;
+    border-bottom: 3px solid transparent;
+    transition: border-bottom 0.3s;
+    padding: 0;
+  }
+
+  &__button:hover {
+    border-bottom: 3px solid $hover;
+  }
+}
+
+.products-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+  margin-bottom: 48px;
+}
+
+.product {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  height: 410px;
+  border: 1px solid rgba(17, 17, 17, 0.2);
+  border-radius: 6px;
+  padding: 18px;
+
+  &__news {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    max-width: 60px;
+    @extend %lato-700;
+    color: #fff;
+    font-size: 10px;
+    text-transform: uppercase;
+  }
+
+  &__news-new {
+    background-color: $accent;
+    @extend %news-border;
+  }
+
+  &__news-discount {
+    background-color: $discount;
+    @extend %news-border;
+  }
+
+  &__news-hit {
+    background-color: #ff7a00;
+    @extend %news-border;
+  }
+
+  &__image {
+    object-fit: cover;
+    margin-bottom: 37px;
+  }
+}
+
+.product-favorite {
+  width: 36px;
+  height: 32px;
+  background-color: transparent;
+  margin-left: auto;
+  margin-bottom: 10px;
+  padding: 0;
+  transition: fill 0.3s;
+
+  & svg {
+    fill: #c1c1c1;
+  }
+
+  & svg:hover {
+    fill: #ffb800;
+  }
+}
+
+.product-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: auto;
+
+  &__cost {
+    @extend %lato-400;
+    font-size: 14px;
+    color: $content;
+  }
+
+  &__cost-old {
+    display: block;
+    position: relative;
+    color: #c1c1c1;
+  }
+
+  &__cost-old::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    border-bottom: 1px solid #c1c1c1;
+    transform: rotate(-12deg);
+    left: 0;
+  }
+}
+
+.product-cart {
+  width: 32px;
+  height: 32px;
+  background-color: $accent;
+  border: none;
+  padding: 0;
+}
+
+.products-more {
+  display: block;
+  color: $accent;
+  background-color: #fff;
+  border: 1px solid $accent;
+  margin: 0 auto;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: $hover;
+  }
+}
+
 // ------ FOOTER
 
 .footer {
   @extend %lato-400;
   color: #fff;
   background-color: $header-footer;
-  padding: 30px 0;
+  padding: 13px 0 20px;
 }
 
 .footer__wrapper {
@@ -332,16 +556,17 @@
 }
 
 .logo__images--footer {
-  margin-bottom: 30px;
+  margin-bottom: 13px;
 }
 
 .subscribe p {
   line-height: 1;
+  letter-spacing: normal;
   margin-bottom: 18px;
 }
 
 .form-footer {
-  max-width: 300px;
+  width: 300px;
 
   &::before {
     display: none;
@@ -351,18 +576,24 @@
     height: 40px;
     padding-left: 12px;
   }
+}
+.main-button--footer {
+  width: 118px;
+  height: 40px;
+  font-size: 12px;
+  line-height: 1.2;
+  @extend %lato-700;
+  text-transform: uppercase;
+  background-color: $accent;
+  border-radius: 0 6px 6px 0;
+  padding: 0 10px 0 8px;
 
-  &__button {
-    width: 118px;
-    height: 40px;
-    font-size: 12px;
-    line-height: 1.2;
-    @extend %lato-700;
-    background-color: $accent;
+  &:active {
+    border-radius: 0 6px 6px 0;
   }
 
-  &__button:hover {
-    background-color: #4d800c;
+  &:focus {
+    border-radius: 0 6px 6px 0;
   }
 }
 
@@ -370,45 +601,35 @@
   display: flex;
 
   &__list:not(:last-child) {
-    margin-right: 84px;
+    margin-right: 70px;
   }
 
-  &__list li:not(:last-child) {
+  &__item:not(:last-child) {
     margin-bottom: 18px;
-  }
-
-  &__list li {
-    transition: opacity 0.3s;
-  }
-
-  &__list li:hover {
-    opacity: 0.7;
   }
 }
 
-.contact__list {
-  margin-bottom: 18px;
-
-  & li:not(:last-child) {
+.contact {
+  &__list {
     margin-bottom: 18px;
   }
 
-  @extend%hover;
+  &__item:not(:last-child) {
+    margin-bottom: 18px;
+  }
 }
 
 .social {
   display: flex;
   align-items: center;
 
-  & li:not(:last-child) {
+  &__item:not(:last-child) {
     margin-right: 12px;
   }
-
-  @extend%hover;
 }
 
 .footer-bottom {
-  padding-top: 30px;
+  padding-top: 20px;
   &__wrapper {
     display: flex;
     justify-content: space-between;
@@ -418,7 +639,7 @@
 
 .bank-card {
   display: flex;
-  & li:not(:last-child) {
+  &__item:not(:last-child) {
     margin-right: 24px;
   }
 }

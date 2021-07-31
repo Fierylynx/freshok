@@ -1,40 +1,37 @@
+$body: #121212;
 $accent: #63a60f;
 $header-footer: #31352b;
-$title: #505050;
-$discount: #CF3E3B;
-
+$content: #505050;
+$discount: #cf3e3b;
+$hover: #e0edcf;
+$main-hover: #4d800c;
 
 %lato-400 {
-  font-family: 'Lato-Regular', sans-serif;
+  font-family: "Lato-Regular", sans-serif;
   font-weight: 400;
 }
 
 %lato-600 {
-  font-family: 'Lato-Semibold', sans-serif;
+  font-family: "Lato-Semibold", sans-serif;
   font-weight: 600;
 }
 
 %lato-700 {
-  font-family: 'Lato-Bold', sans-serif;
+  font-family: "Lato-Bold", sans-serif;
+  font-weight: 700;
+}
+
+%signika-600 {
+  font-family: "Signika-SemiBold", sans-serif;
   font-weight: 700;
 }
 
 %signika-700 {
-  font-family: 'Signika-SemiBold', sans-serif;
+  font-family: "Signika-Bold", sans-serif;
   font-weight: 700;
 }
 
-%signika-700 {
-  font-family: 'Signika-Bold', sans-serif;
-  font-weight: 700;
-}
-
-%hover {
-  & li {
-    transition: opacity .3s;
-  }
-
-  & li:hover {
-    opacity: 0.7;
-  }
+%news-border {
+  border-radius: 6px;
+  padding: 0 6px;
 }
