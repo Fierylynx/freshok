@@ -14,7 +14,7 @@ $('.menu-product').each(function() {
 
   const selectHead = _this.next('.select-product');
   $('<ul>', {
-      class: 'select-product__list'
+      class: 'select-product__list',
   }).insertAfter(selectHead);
 
   const selectList = selectHead.next('.select-product__list');
@@ -50,13 +50,26 @@ $('.menu-product').each(function() {
           $(this).removeClass('on');
           selectList.slideUp(duration);
       }
+
+      
   });
+
   $('.hero-slider').slick({
       dots: false,
 
       nextArrow: '<button type="button" class="slick-next"><img src="../images/icons/arrow-prev.svg" alt=""></button>',
       prevArrow: '<button type="button" class="slick-prev"><img src="../images/icons/arrow-next.svg" alt=""></button>'
   });
+
+  $('.logotype-slider__list').slick({
+    dots: false,
+    arrows: false,
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+
+});
 
 
   var mixer = mixitup('.products-list');

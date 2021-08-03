@@ -32,6 +32,14 @@ svg {
   padding: 72px 0;
 }
 
+.title {
+  @extend %signika-600;
+  font-size: 32px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -82,4 +90,30 @@ svg {
 .focus:focus {
   border: 3px solid $hover;
   border-radius: 6px;
+}
+
+.breadcrumbs {
+  color: $content;
+  background-color: #F6F6F6;
+  padding: 24px 0;
+  &__list {
+    display: flex;
+  }
+
+  &__item:not(:last-child) {
+    position: relative;
+    margin-right: 18px;
+  }
+
+  &__item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    right: -11px;
+    width: 6px;
+    height: 10px;
+    background-image: url('../images/icons/breadcrumbs-arrow.svg');
+    background-repeat: no-repeat;
+  }
+
 }
