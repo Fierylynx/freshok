@@ -1,0 +1,65 @@
+.jq-number {
+  position: relative;
+  padding: 0;
+  margin-right: 24px;
+
+  &__field {
+    width: 87px;
+  }
+
+  &__field input {
+    display: inline-block;
+    width: 100%;
+    padding: 1px 25px;
+    font-size: 16px;
+    font-weight: 400;
+    color: $dark-500;
+    text-align: center;
+    border: none;
+    background-color: $green-100;
+  }
+
+  &__spin {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 24px;
+    height: 24px;
+    background-color: $green-900;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 11px;
+      left: 4px;
+      width: 16px;
+      height: 1px;
+      background-color: $white;
+      border-radius: 1px;
+    }
+    &:hover {
+      background-color: $green-1000;
+    }
+    &:active {
+      box-shadow: inset 0px 10px 4px rgba(0, 0, 0, 0.1);
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  &__spin.minus {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  &__spin.plus::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 11px;
+    width: 1px;
+    height: 16px;
+    background-color: $white;
+  }
+}

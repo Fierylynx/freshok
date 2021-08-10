@@ -16,7 +16,7 @@ window.onclick = function(event) {
   }
 }
 
-$('.number').styler();
+$('.product-card__counter').styler();
 
 $('.hero-slider__list').slick({
       dots: false,

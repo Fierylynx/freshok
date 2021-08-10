@@ -77,7 +77,7 @@ function images(){
 }
 
 function svgSprites(){
-  return src('app/images/icons/**.svg')
+  return src('app/images/icons/*.svg')
   .pipe(svgSprite({
     mode: {
       stack: {
