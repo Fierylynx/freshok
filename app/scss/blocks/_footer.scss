@@ -1,0 +1,111 @@
+.footer {
+  padding: 30px 0 20px;
+  font-weight: 400;
+  color: $white;
+  background-color: $dark-800;
+
+  &__logo {
+    display: inline-block;
+    margin-bottom: 25px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  &__text {
+    width: 300px;
+    margin-bottom: 18px;
+    line-height: 1;
+  }
+
+  &__menu {
+    display: flex;
+  }
+
+  &__bottom {
+    padding-top: 20px;
+  }
+  &__bottom-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.form {
+  &--subscribe {
+    width: 300px;
+  }
+
+  &::before {
+    display: none;
+  }
+
+  &__input--subscribe {
+    height: 40px;
+    padding-left: 12px;
+    letter-spacing: normal;
+  }
+}
+
+.main-button--subscribe {
+  width: 118px;
+  height: 40px;
+  padding: 0 10px 0 8px;
+  font-size: 12px;
+  line-height: 1.2;
+  font-weight: 400;
+  text-transform: uppercase;
+  background-color: $green-900;
+  border-radius: 0 6px 6px 0;
+
+  &:active {
+    border-radius: 0 6px 6px 0;
+  }
+
+  &:focus {
+    border-radius: 0 6px 6px 0;
+  }
+}
+
+.footer-menu {
+  &:not(:last-child) {
+    margin-right: 85px;
+  }
+  &__item:not(:last-child) {
+    margin-bottom: 18px;
+  }
+}
+
+.contact {
+  &__address {
+    font-style: normal;
+  }
+
+  &__list {
+    margin-bottom: 18px;
+  }
+
+  & li:not(:last-child) {
+    margin-bottom: 18px;
+  }
+}
+
+.social {
+  display: flex;
+
+  &__item:not(:last-child) {
+    margin-right: 12px;
+  }
+}
+
+.bank-card {
+  display: flex;
+  &__item:not(:last-child) {
+    margin-right: 24px;
+  }
+}

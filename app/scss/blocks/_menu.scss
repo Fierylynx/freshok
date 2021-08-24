@@ -1,0 +1,219 @@
+.logo {
+
+  &__image {
+    object-fit: contain;
+  }
+}
+
+.menu {
+  background-color: $green-900;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+  }
+
+  &__dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  &__dropdown-button {
+    position: relative;
+    padding: 15px 45px 15px 60px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    color: $green-900;
+    background-color: $white;
+    border: none;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 18px;
+      width: 25px;
+      height: 17px;
+      background-image: url("../images/icons/nav_icon.svg");
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 22px;
+      right: 15px;
+      width: 7px;
+      height: 4px;
+      background-image: url("../images/icons/chevron.svg");
+    }
+
+    &:hover {
+      background-color: $green-200;
+    }
+  }
+
+  &__dropdown-content {
+    position: absolute;
+    top: 45px;
+    z-index: 1;
+    display: none;
+    width: 100%;
+    background-color: $white;
+    border: 1px solid $silver-100;
+    border-radius: 0px 0px 6px 6px;
+    overflow: auto;
+
+    &--on {
+      display: block;
+    }
+  }
+
+  &__dropdown-content a {
+    display: block;
+    padding: 15px 21px;
+    color: $dark-900;
+    text-decoration: none;
+    border-bottom: 1px solid $silver-600;
+    border-left: 3px solid transparent;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &:hover {
+      color: $green-900;
+      border-left: 3px solid $green-900;
+    }
+  }
+}
+
+.show {
+  // функция в main.js для выпадения списка
+  display: block;
+}
+
+.form {
+  max-width: 576px;
+  width: 100%;
+
+  &__label {
+    position: relative;
+    display: flex;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 15px;
+      left: 13px;
+      width: 20px;
+      height: 20px;
+      background-image: url("../images/icons/loupe.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    padding: 0 10px 0 50px;
+    border: none;
+    border-radius: 6px 0 0px 6px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.4px;
+    color: $dark-800;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: $green-200;
+    }
+    &:focus {
+      border-radius: 6px 0 0px 6px;
+    }
+
+    &::placeholder {
+      color: $dark-800;
+    }
+  }
+
+  &__button {
+    padding: 15px 55px;
+    font-weight: 400;
+    color: $white;
+    text-transform: uppercase;
+    background-color: $dark-800;
+    border: none;
+    border-radius: 0 6px 6px 0;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: rgba(49, 53, 43, 0.85);
+    }
+
+    &:active {
+      box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    &:focus {
+      border-radius: 0 6px 6px 0;
+    }
+  }
+}
+
+.user-navigation {
+  display: flex;
+  align-items: center;
+  margin-right: 16px;
+
+  &__item:not(:last-child) {
+    margin-right: 18px;
+  }
+
+  &__number {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    padding: 2px 3px;
+    font-size: 10px;
+    text-align: center;
+    color: $red-900;
+    background-color: $white;
+    border-radius: 20px;
+  }
+}
+
+.user-button {
+  position: relative;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background-color: transparent;
+  border: none;
+  border-radius: 3px;
+
+  &--product {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    background-color: $green-900;
+    border: none;
+    transition: background-color 0.3s;
+  }
+
+  &:hover {
+    background-color: $green-1000;
+  }
+
+  &:active {
+    background-color: $green-900;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  &:active svg {
+    opacity: 0.5;
+  }
+}

@@ -1,0 +1,15 @@
+.logotype-slider {
+  // поставил svg по центру слайдера, не выходить нормально поставить их от края до края,
+  //как в макете, так же не удалось центрировать элементы
+  height: 80px;
+
+  &__item svg {
+    display: block;
+    margin: 0 auto;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

@@ -25,7 +25,7 @@ $('.hero-slider__list').slick({
       prevArrow: '<button type="button" class="slick-prev"><img src="../images/icons/arrow-next.svg" alt=""></button>'
   });
 
-  $('.logotype-slider__list').slick({
+$('.logotype-slider__list').slick({
     dots: false,
     arrows: false,
     slidesToShow: 6,
@@ -33,6 +33,14 @@ $('.hero-slider__list').slick({
     autoplay: true,
     autoplaySpeed: 2000,
 
+});
+
+
+$('.filter-style, .catalog-filter__select').styler();
+
+
+$('.filter-price__range').ionRangeSlider({
+  type: "double",
 });
 
 
