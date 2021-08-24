@@ -49,7 +49,7 @@
   }
 
   &__image {
-    object-fit: cover;
+    object-fit: contain;
     margin-bottom: 14px;
     &--row {
       margin: 0 24px 0 0;
@@ -78,7 +78,7 @@
 
   &__buy {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
   }
 }
 
@@ -110,6 +110,7 @@
   border: none;
   transition: fill 0.3s;
   &__svg {
+    background-size: cover;
     fill: $silver-600;
     &:hover {
       fill: $yellow-900;
@@ -217,12 +218,4 @@
       margin-left: -3px;
     }
   }
-}
-
-.product-cart {
-  width: 32px;
-  height: 32px;
-  padding: 0;
-  background-color: $green-900;
-  border: none;
 }

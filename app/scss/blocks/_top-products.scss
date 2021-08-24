@@ -1,0 +1,38 @@
+.top-products {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+    margin-bottom: 48px;
+  }
+
+  &__more {
+    text-align: center;
+  }
+}
+
+.products-filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 48px;
+
+  &__item:not(:last-child) {
+    margin-right: 16px;
+  }
+
+  &__button {
+    padding: 0;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    color: $dark-500;
+    text-transform: uppercase;
+    background-color: transparent;
+    border-bottom: 3px solid transparent;
+    transition: border-bottom 0.3s;
+  }
+
+  &__button:hover {
+    border-bottom: 3px solid $green-200;
+  }
+}

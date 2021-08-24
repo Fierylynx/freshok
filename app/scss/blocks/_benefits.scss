@@ -1,0 +1,58 @@
+.benefits {
+  &__list {
+    display: flex;
+    justify-content: center;
+    padding: 48px 0;
+    background-color: $silver-100;
+  }
+
+  &__content {
+    letter-spacing: normal;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width: 280px;
+    padding-left: 74px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 50px;
+      height: 50px;
+      background-repeat: no-repeat;
+    }
+
+    &--moto::before {
+      background-image: url("../images/icons/scooter.svg");
+    }
+
+    &--cashback::before {
+      background-image: url("../images/icons/cashback.svg");
+    }
+
+    &--privat::before {
+      background-image: url("../images/icons/privat.svg");
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 48px;
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: 8px;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  &__text {
+    font-weight: 400;
+    color: $dark-500;
+  }
+}

@@ -1,0 +1,51 @@
+.accordion {
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  &__details {
+    position: relative;
+    max-width: 300px;
+    width: 100%;
+    display: inline-block;
+    border: 1px solid $silver-600;
+    border-radius: 6px;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 18px;
+      height: 10px;
+      background-image: url("../images/icons/chevron-catalog.svg");
+      background-repeat: no-repeat;
+      right: 24px;
+      top: 29px;
+      transform: rotate(180deg);
+    }
+    &[open]::after {
+      transform: rotate(0);
+    }
+  }
+
+  &__details[open] .accordion__title {
+    border-bottom: 1px solid $silver-600;
+  }
+
+  &__list {
+    padding: 18px;
+    font-size: 18px;
+    color: $dark-500;
+    & li{
+      cursor: pointer;
+    }
+    & li:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__title {
+    padding: 18px;
+    font-size: 24px;
+    font-weight: 400;
+    list-style: none;
+    cursor: pointer;
+  }
+}

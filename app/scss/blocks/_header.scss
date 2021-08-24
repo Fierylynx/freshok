@@ -25,7 +25,7 @@
 
   &__contact-link {
     position: relative;
-    padding-left: 44px;
+    padding: 12px 0 12px 44px;
     letter-spacing: 0.4px;
 
     &::before {
@@ -37,7 +37,7 @@
     }
     &--address::before {
       left: 0;
-      top: -4px;
+      top: 8px;
       width: 32px;
       height: 22px;
       background-image: url("../images/sprite.svg#address");
@@ -45,7 +45,7 @@
     &--phone::before {
       width: 23px;
       height: 23px;
-      top: -2px;
+      top: 9px;
       left: 10px;
       background-image: url("../images/sprite.svg#phone");
     }
@@ -57,5 +57,9 @@
 
   &__info-item:not(:last-child) {
     margin-right: 27px;
+  }
+
+  &__info-link {
+    padding: 12px 0;
   }
 }

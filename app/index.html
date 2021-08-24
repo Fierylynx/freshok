@@ -21,13 +21,13 @@
 
           <ul class="header__contact">
             <li class="header__contact-item">
-              <a class="header__contact-link header__contact-link--address" href="#">
+              <a class="header__contact-link header__contact-link--address animation" href="#">
                 Адрес и время доставки
               </a>
             </li>
 
             <li class="header__contact-item">
-              <a class="header__contact-link header__contact-link--phone" href="#">
+              <a class="header__contact-link header__contact-link--phone animation" href="#">
                 Горячая линия 24/7
               </a>
             </li>
@@ -35,19 +35,19 @@
 
           <ul class="header__info">
             <li class="header__info-item">
-              <a class="header__info-link" href="#">
+              <a class="header__info-link animation" href="#">
                 Доставка
               </a>
             </li>
 
             <li class="header__info-item">
-              <a class="header__info-link" href="#">
+              <a class="header__info-link animation" href="#">
                 О нас
               </a>
             </li>
 
             <li class="header__info-item">
-              <a class="header__info-link" href="#">
+              <a class="header__info-link animation" href="#">
                 Новости
               </a>
             </li>
@@ -66,7 +66,6 @@
             </a>
 
             <div class="menu__dropdown">
-              <!-- проблема с border-radius (поднял список на 6px относительно кнопки) -->
               <button onclick="myFunction()" class="menu__dropdown-button">Каталог продуктов</button>
               <div id="myDropdown" class="menu__dropdown-content">
                 <a href="#">Овощи и фрукты</a>
@@ -84,11 +83,13 @@
             </div>
 
             <form class="form">
-              <input class="form__input" type="text" placeholder="Найти в магазине ..." required name="search-name"
-                aria-label="Напишите товар, который вы ищете">
-              <button class="form__button" type="button">
-                Поиск
-              </button>
+              <label class="form__label">
+                <input class="form__input" type="text" placeholder="Найти в магазине ..." required name="search-name"
+                  aria-label="Напишите товар, который вы ищете">
+                <button class="form__button" type="button">
+                  Поиск
+                </button>
+              </label>
             </form>
 
 
@@ -341,7 +342,7 @@
               </div>
               <div class="product-card__buy">
                 <input class="product-card__counter" type="number" value="1" min="1">
-                <button class="user-button product-cart" type="button">
+                <button class="user-button user-button--product" type="button">
                   <svg width="16" height="15">
                     <use xlink:href="images/sprite.svg#cart"></use>
                   </svg>
@@ -402,7 +403,7 @@
               </div>
               <div class="product-card__buy">
                 <input class="product-card__counter" type="number" value="1" min="1">
-                <button class="user-button product-cart" type="button">
+                <button class="user-button user-button--product" type="button">
                   <svg width="16" height="15">
                     <use xlink:href="images/sprite.svg#cart"></use>
                   </svg>
@@ -464,7 +465,7 @@
               </div>
               <div class="product-card__buy">
                 <input class="product-card__counter" type="number" value="1" min="1">
-                <button class="user-button product-cart" type="button">
+                <button class="user-button user-button--product" type="button">
                   <svg width="16" height="15">
                     <use xlink:href="images/sprite.svg#cart"></use>
                   </svg>
@@ -526,7 +527,7 @@
               </div>
               <div class="product-card__buy">
                 <input class="product-card__counter" type="number" value="1" min="1">
-                <button class="user-button product-cart" type="button">
+                <button class="user-button user-button--product" type="button">
                   <svg width="16" height="15">
                     <use xlink:href="images/sprite.svg#cart"></use>
                   </svg>
@@ -588,7 +589,7 @@
               </div>
               <div class="product-card__buy">
                 <input class="product-card__counter" type="number" value="1" min="1">
-                <button class="user-button product-cart" type="button">
+                <button class="user-button user-button--product" type="button">
                   <svg width="16" height="15">
                     <use xlink:href="images/sprite.svg#cart"></use>
                   </svg>
@@ -650,7 +651,7 @@
               </div>
               <div class="product-card__buy">
                 <input class="product-card__counter" type="number" value="1" min="1">
-                <button class="user-button product-cart" type="button">
+                <button class="user-button user-button--product" type="button">
                   <svg width="16" height="15">
                     <use xlink:href="images/sprite.svg#cart"></use>
                   </svg>
@@ -712,7 +713,7 @@
               </div>
               <div class="product-card__buy">
                 <input class="product-card__counter" type="number" value="1" min="1">
-                <button class="user-button product-cart" type="button">
+                <button class="user-button user-button--product" type="button">
                   <svg width="16" height="15">
                     <use xlink:href="images/sprite.svg#cart"></use>
                   </svg>
@@ -774,7 +775,7 @@
               </div>
               <div class="product-card__buy">
                 <input class="product-card__counter" type="number" value="1" min="1">
-                <button class="user-button product-cart" type="button">
+                <button class="user-button user-button--product" type="button">
                   <svg width="16" height="15">
                     <use xlink:href="images/sprite.svg#cart"></use>
                   </svg>
@@ -1461,17 +1462,17 @@
 
           <ul class="footer-menu">
             <li class="footer-menu__item">
-              <a class="footer-menu__link" href="#">
+              <a class="footer-menu__link animation" href="#">
                 О нас
               </a>
             </li>
             <li class="footer-menu__item">
-              <a class="footer-menu__link" href="#">
+              <a class="footer-menu__link animation" href="#">
                 Контакты
               </a>
             </li>
             <li class="footer-menu__item">
-              <a class="footer-menu__link" href="#">
+              <a class="footer-menu__link animation" href="#">
                 Публичная оферта
               </a>
             </li>
@@ -1479,17 +1480,17 @@
 
           <ul class="footer-menu">
             <li class="footer-menu__item">
-              <a class="footer-menu__link" href="#">
+              <a class="footer-menu__link animation" href="#">
                 Оплата и доставка
               </a>
             </li>
             <li class="footer-menu__item">
-              <a class="footer-menu__link" href="#">
+              <a class="footer-menu__link animation" href="#">
                 Вакансии
               </a>
             </li>
             <li class="footer-menu__item">
-              <a class="footer-menu__link" href="#">
+              <a class="footer-menu__link animation" href="#">
                 Акции
               </a>
             </li>
@@ -1497,12 +1498,12 @@
 
           <ul class="footer-menu">
             <li class="footer-menu__item">
-              <a class="footer-menu__link" href="#">
+              <a class="footer-menu__link animation" href="#">
                 Отзывы
               </a>
             </li>
             <li class="footer-menu__item">
-              <a class="footer-menu__link" href="#">
+              <a class="footer-menu__link animation" href="#">
                 Новости
               </a>
             </li>
@@ -1514,7 +1515,7 @@
           <address class="contact__address">
             <ul class="contact__list">
               <li>
-                <a href="tel:+7907288365">
+                <a class="animation" href="tel:+7907288365">
                   <span>
                     Горячая линия
                   </span>
@@ -1522,7 +1523,7 @@
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a class="animation" href="#">
                   Санкт-Петербург, ул. Ленина, 1
                 </a>
               </li>
@@ -1531,28 +1532,28 @@
 
           <ul class="social">
             <li class="social__item">
-              <a class="social__link" href="#">
+              <a class="social__link animation" href="#">
                 <svg width="32" height="32">
                   <use xlink:href="images/sprite.svg#facebook"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link" href="#">
+              <a class="social__link animation" href="#">
                 <svg width="32" height="32">
                   <use xlink:href="images/sprite.svg#youtube"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link" href="#">
+              <a class="social__link animation" href="#">
                 <svg width="32" height="32">
                   <use xlink:href="images/sprite.svg#telegram"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link" href="#">
+              <a class="social__link animation" href="#">
                 <svg width="32" height="32">
                   <use xlink:href="images/sprite.svg#instagram"></use>
                 </svg>

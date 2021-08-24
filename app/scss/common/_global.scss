@@ -5,7 +5,7 @@ body {
 
 body {
   font-family: "Lato", sans-serif;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 14px;
   line-height: 1.4;
   color: $dark-900;
@@ -100,29 +100,4 @@ svg {
 .focus:focus {
   border: 3px solid $green-200;
   border-radius: 6px;
-}
-
-.breadcrumbs {
-  color: $dark-500;
-  background-color: #f6f6f6;
-  padding: 24px 0;
-  &__list {
-    display: flex;
-  }
-
-  &__item:not(:last-child) {
-    position: relative;
-    margin-right: 18px;
-  }
-
-  &__item:not(:last-child)::after {
-    content: "";
-    position: absolute;
-    top: 6px;
-    right: -11px;
-    width: 6px;
-    height: 10px;
-    background-image: url("../images/icons/breadcrumbs-arrow.svg");
-    background-repeat: no-repeat;
-  }
 }
